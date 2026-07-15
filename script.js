@@ -115,6 +115,12 @@ window.updatedoc = async function (id) {
     setTimeout(() => {
       notif.classList.remove("show");
     }, 2000);
+    document.querySelector('#name').value = "";
+    document.querySelector('#email').value = "";
+
+    // Show Add Button Again
+    updateBtn.classList.add('hide');
+    submit.classList.remove('hide');
     getData();
   })
 }
